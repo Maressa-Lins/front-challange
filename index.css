@@ -1,3 +1,119 @@
 body {
   margin: 80px;
+  background-color: blue;
+  font-family:Arial;
+  font-size:16px;
+}
+
+#tela {
+  background-color: white;
+  margin:2em;
+}
+
+h1 {
+  color: black;
+  font-family:Arial;
+  text-align: center;
+  font-size:22px;
+}
+
+img {
+  background-image: url("http://p.favim.com/orig/2018/10/30/black-eyes-black-cachorro-Favim.com-6471650.jpg");
+  background-size: cover;
+  height: 636px;
+  float: left;
+}
+
+.form {
+  text-align: center;
+}
+
+#name {
+  padding:5px 18px;
+  height: 30px;
+  width: 220px;
+  border: 2px solid Lightgrey;
+  border-radius: 20px;
+}
+
+#phone {
+  padding:5px 18px;
+  height: 30px;
+  width: 220px;
+  border: 2px solid Lightgrey;
+  border-radius: 20px;
+}
+
+#email {
+  padding:5px 18px;
+  height: 30px;
+  width: 485px;
+  border: 2px solid Lightgrey;
+  border-radius: 20px;
+}
+
+#password {
+  padding:5px 18px;
+  height: 30px;
+  width: 220px;
+  border: 2px solid Lightgrey;
+  border-radius: 20px;
+}
+
+#repeat {
+  padding:5px 18px;
+  height: 30px;
+  width: 220px;
+  border: 2px solid Lightgrey;
+  border-radius: 20px;
+}
+
+#Register-Account {
+  padding: 12px 200px;
+  background: blue;
+  color: white;
+  text-decoration: none;
+  border: 1px solid blue;
+  border-radius: 20px;
+}
+
+hr {
+  margin: 10px 30px;
+  border: 0;
+  border-top: 1px solid Lightgrey;
+}
+
+#register-google {
+  padding: 12px 187px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border: 1px solid red;
+  border-radius: 20px;
+}
+
+#register-facebook {
+  padding: 12px 178px;
+  background: darkblue;
+  color: white;
+  text-decoration: none;
+  border: 1px solid darkblue;
+  border-radius: 20px;
+}
+
+#forgot-password {
+  color: blue;
+  text-decoration: none;
+}
+
+#have-an-account {
+  color: blue;
+  text-decoration: none;
+}
+
+#questions {
+  font-size:14px;
 }

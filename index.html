@@ -4,6 +4,59 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <!-- escreva seu codigo aqui -->
+    <div id="tela">
+      <img src="http://p.favim.com/orig/2018/10/30/black-eyes-black-cachorro-Favim.com-6471650.jpg" id="imagem" alt="Imagem de um pug"><br><br><br>
+        <div class="form">
+          <h1>Create an Account!</h1>
+          <div id="register">
+            <input type="tel" name="name" id="name" data-testid="royal_name" placeholder="First Name" autofocus="1" aria-label="First Name"/>
+            <input type="text" name="phone" id="phone"  placeholder="Phone" autofocus="1" aria-label="Phone" onkeypress="return onlynumber();" onkeyup="mascara( this, mtel );" maxlength="15/"><br><br>
+            <input type="text" name="email" id="email" data-testid="royal_email" placeholder="Email Address" autofocus="1" aria-label="Email Address"/><br><br>
+            <input type="password" name="password" id="password" data-testid="royal_password" placeholder="Password" autofocus="1" aria-label="Password"/>
+            <input type="password" name="repeat" id="repeat" data-testid="royal_password" placeholder="Repeat Password" autofocus="1" aria-label="Repeat Password" oninput="validarSenha(this)"/><br><br><br>
+          </div>
+          <a href="#" id="Register-Account">Register Account</a> <br><br><hr><br>
+          <a href="#" id="register-google">Register with Google</a><br><br><br>
+          <a href="#" id="register-facebook">Register with Facebook</a><br><br><hr><br>
+            <div id="questions">
+              <a href="#" id="forgot-password">Forgot Password?</a><br><br>
+              <a href="#" id="have-an-account">Already have an account? Login!</a><br><br><br><br><br>
+            </div>
+          </div>
+    </div>
+    <script>
+    function onlynumber(evt) {
+       var theEvent = evt || window.event;
+       var key = theEvent.keyCode || theEvent.which;
+       key = String.fromCharCode( key );
+       //var regex = /^[0-9.,]+$/;
+       var regex = /^[0-9.]+$/;
+       if( !regex.test(key) ) {
+          theEvent.returnValue = false;
+          if(theEvent.preventDefault) theEvent.preventDefault();
+       }
+    }
+    function mascara(o,f){
+        v_obj=o
+        v_fun=f
+        setTimeout("execmascara()",1)
+    }
+    function execmascara(){
+        v_obj.value=v_fun(v_obj.value)
+    }
+    function mtel(v){
+        v=v.replace(/\D/g,"");            
+        v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); 
+        v=v.replace(/(\d)(\d{4})$/,"$1-$2");   
+        return v;
+    }
+    function validarSenha(input){
+        if(input.valueOf !== document.getElementById("password").value){
+            input.setCustomValidity('Wrong password! Please repeat.');
+        }else{
+            input.setCustomValidity('');
+        }
+    }
+    </script>
   </body>
 </html>
